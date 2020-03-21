@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 16px;
+}
+
+#main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+}
+
+#bookList {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 2;
+    background: green;
+    min-width: 250px;
+}
+
+#bookDetails {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 7;
+    background: red;
+    min-width: 250px;
+}
+
+#bookInfo {
+    display: flex;
+    flex-grow: 1;
+    background: yellow;
+}
+
+#bookNotes {
+    display: flex;
+    flex-grow: 4;
+    background: blue;
+}
+
+#bookNotes > textarea {
+    width: 100%;
+    margin: 16px;
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.15);
+}
+
+.book {
+    padding: 12px 24px;
+    border: 1px solid pink;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
