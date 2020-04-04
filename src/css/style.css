@@ -1,16 +1,37 @@
 body {
     margin: 0;
+    font-family: Verdana !important;
 }
 
-h1 {
-    text-align: center;
-    padding: 16px;
+header {
+    padding: 20px;
+    display: flex !important;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 #main {
     display: flex;
     flex-flow: row wrap;
     justify-content: stretch;
+}
+
+@media only screen and (max-width: 750px) {
+    /* Display only the current book details */
+    #main {
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: stretch;
+    }
+    
+    #bookList {
+        height: 0px;
+        overflow: none;
+    }
+    
+    .book {
+        display: none;
+    }
 }
 
 #bookList {
@@ -33,12 +54,21 @@ h1 {
     display: flex;
     flex-grow: 1;
     background: yellow;
+    padding: 16px 12px;
+    justify-content: space-around;
+}
+
+#titleAuthorBox {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
 }
 
 #bookNotes {
     display: flex;
     flex-grow: 4;
     background: blue;
+    min-height: 400px;
 }
 
 #bookNotes > textarea {
@@ -51,6 +81,5 @@ h1 {
     padding: 12px 24px;
     border: 1px solid pink;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
